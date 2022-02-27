@@ -84,7 +84,8 @@ class Test(unittest.TestCase):
         # true check
         for check_permutation in self.testable_functions:
             for str1, str2, expected in self.test_cases:
-                assert check_permutation(str1, str2) == expected
+                actual = check_permutation(str1, str2)
+                assert actual == expected, f"Failed {check_permutation.__name__} for input: {str1}, {str2}, expecting {expected} but we've got {actual}"
 
 
 if __name__ == "__main__":

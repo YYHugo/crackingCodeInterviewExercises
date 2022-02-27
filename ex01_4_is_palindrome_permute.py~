@@ -43,13 +43,13 @@ def c_number(c):
     first = ord("a")
     val = ord(c)
     last = ord("z")
-
+    
     # check only letters
     if first <= val <= last:
         return (val - first)
     # not a letter
     return -1
-
+    
 class Test(unittest.TestCase):
     '''
         Unit testing
