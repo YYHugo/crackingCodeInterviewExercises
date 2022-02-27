@@ -59,7 +59,8 @@ class Test(unittest.TestCase):
         # true check
         for unique_c in self.test_functions:
             for string, expected in self.test_cases:
-                assert unique_c(string) == expected, f"Failed {unique_c.__name__} for input: {[string]}"
+                actual = unique_c(string)
+                assert actual == expected, f"Failed {unique_c.__name__} for input: {[string]}, expecting {expected} but we've got {actual}"
 
 if __name__ == "__main__":
     unittest.main()

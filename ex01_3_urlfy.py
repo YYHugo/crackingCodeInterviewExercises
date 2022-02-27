@@ -55,7 +55,7 @@ class Test(unittest.TestCase):
         for urlify_string_test in self.test_functions:
             for args, expected in self.test_cases.items():
                 actual = urlify_string_test(*args)
-                assert actual == expected, f"Failed {urlify_string.__name__} for: {[*args]}"
+                assert actual == expected, f"Failed {urlify_string.__name__} for: {[*args]}, expecting {expected} but we've got {actual}"
 
 
 if __name__ == "__main__":
