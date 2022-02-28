@@ -68,10 +68,10 @@ def is_edit_insert(s1, s2):
     edited = False
     i = 0
     j = 0
-    print("s1 = {} \t s2 = {}".format(s1, s2))
+
     while (i < len(s1)) and \
             (j < len(s2)):
-        print("s1[{}] = {} \t s2[{}] = {}".format(i, s1[i], j, s2[j]))
+
         if s1[i] != s2[j]:
             if edited:
                 return False

@@ -30,9 +30,6 @@ def is_palindrome_permuted(string):
                 countodd += 1
             else:
                 countodd -= 1
-        else:
-            print("countodd: " + str(countodd))
-            return False
 
     return countodd <=1
 
@@ -69,6 +66,7 @@ class Test(unittest.TestCase):
         ("no x in nixon"): True,
         ("azAZ"): True,
         (""): True,
+        ("no-x-in-nixon"): True,
         ("1221"): True,
         ("aba>"): True
     }
